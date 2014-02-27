@@ -1,6 +1,8 @@
 @import "bootstrap";
 
-/* universal */
+$deepBlue: #282B57;
+
+;/* universal */
 
 html {
   overflow-y: scroll;
@@ -8,6 +10,7 @@ html {
 
 body {
   padding-top: 60px;
+  background-color: #F5F4EB;
 }
 
 section {
@@ -21,7 +24,7 @@ textarea {
 .center {
   text-align: center;
   h1 {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
   }
 }
 
@@ -35,13 +38,25 @@ textarea {
 
 .product-list {
   list-style: none;
+  font-size: 12px;
   li {
-    padding: 10px;
-    width: 20%;
+    background-color: #FFF;
+    padding: 0px;
+    width: 33%;
     float: left;
-    height: 185px;
+    height: 300px;
     text-align: center;
   }
+  span {
+    font-family: Verdana, Arial, sans;
+    color: $deepBlue; 
+    display: block;
+    text-decoration: underline;
+    line-height: 14px;
+  }
+}
+.brandName {
+  font-weight: bold;
 }
 
 /* text */
@@ -53,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 3em;
   letter-spacing: -2px;
-  margin-bottom: 100px;
+  margin-bottom: 25px;
   text-align: center;
 }
 
@@ -76,7 +91,7 @@ p {
 #logo {
   float: left;
   margin-right: 10px;
-  font-size: 1.7em;
+  font-size: 1.6em;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: -1px;
@@ -116,33 +131,3 @@ footer {
   
 }
 
-/* sidebar */
-
-aside {
-  section {
-    padding: 10px 0;
-    border-top: 1px solid $grayLighter;
-    &:first-child {
-      border: 0;
-      padding-top: 0;
-    }
-    span {
-      display: block;
-      margin-bottom: 3px;
-      line-height: 1;
-    }
-    h1 {
-      font-size: 1.0em;
-      text-align: left;
-      letter-spacing: 0px;
-      margin-bottom: 3px;
-      margin-top: 0px;
-    }
-    h2 {
-      font-size: 0.8em;
-      text-align: left;
-      letter-spacing: 1px;
-      margin-bottom: 5px;
-    }
-  }
-}

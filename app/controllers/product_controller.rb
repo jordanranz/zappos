@@ -5,7 +5,8 @@ class ProductController < ApplicationController
   end
   
   def index
-    @products = do_search(params[:search])
+    #@products = do_search(params[:search])
+    @products = Product.all
   end
 
   def show

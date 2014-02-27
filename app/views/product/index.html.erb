@@ -1,14 +1,18 @@
 <h1>
 Results  
 </h1>
+<h2>Search Results for "<%= params[:search] %>"</h2>
 
 <div class="container">
   <ul class="product-list">
     <% @products.each do |p| %>
     <li>
+      <a href="">
       <%= img_for(p) %> 
-      <p><%= p['brandName'] %></p>
-      <p><%= p['productName'] %></p>
+      <span class="brandName"><%= p['brandName'] %></span>
+      <span class="productName"><%= p['productName'] %></span>
+      <span class="price">$<%= sprintf "%.2f", p['price'] %></span>
+      </a>
     </li>
     <% end %>
   </ul>
