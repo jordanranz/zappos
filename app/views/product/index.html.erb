@@ -1,0 +1,15 @@
+<h1>
+Results  
+</h1>
+
+<div class="container">
+  <ul class="product-list">
+    <% @products.each do |p| %>
+    <li>
+      <%= img_for(p) %> 
+      <p><%= p['brandName'] %></p>
+      <p><%= p['productName'] %></p>
+    </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,8 +1,9 @@
 <div class="center hero-unit">
   <h1>Zappos Challenge</h1>
-
-  <h2>
-
-  </h2>
+  <h2>Search for a product!</h2>
+  <%= form_tag("/product", method: "get") do %>
+      <%= text_field_tag :search %>
+      <%= submit_tag "Search" %> 
+  <% end %> 
 </div>
 
