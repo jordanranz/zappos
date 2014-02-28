@@ -7,11 +7,11 @@ Results
   <ul class="product-list">
     <% @products.each do |p| %>
     <li>
-      <a href="">
+      <a href="/product/<%= p['productId'] %>">
       <%= img_for(p) %> 
       <span class="brandName"><%= p['brandName'] %></span>
       <span class="productName"><%= p['productName'] %></span>
-      <span class="price">$<%= sprintf "%.2f", p['price'] %></span>
+      <span class="price"><%= p['price'] %></span>
       </a>
     </li>
     <% end %>

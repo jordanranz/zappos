@@ -5,12 +5,13 @@ class ProductController < ApplicationController
   end
   
   def index
-    #@products = do_search(params[:search])
-    @products = Product.all
+    @products = do_search(params[:search])
+    #@products = Product.all
   end
 
   def show
-    @product = Product.find(params[:id])
+    @product = get_prod(params[:id]).first
+	#@product = Product.find_by productId: params[:id]
   end
 
 end
