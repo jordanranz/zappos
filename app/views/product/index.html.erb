@@ -1,8 +1,11 @@
 <h1>
 Results  
 </h1>
-<h2>Search Results for "<%= params[:search] %>"</h2>
-
+<% if @products.empty? %>
+  <h2>No Results for "<%= params[:search] %>"</h2>
+<% else %>
+  <h2>Search Results for "<%= params[:search] %>"</h2>
+<% end %>
 <div class="container">
   <ul class="product-list">
     <% @products.each do |p| %>

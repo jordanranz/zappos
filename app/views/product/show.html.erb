@@ -9,8 +9,10 @@
 		<span id="curr_price">Price: <%= @product['styles'].first['price'] %></span>
 	  </div>
 	  <%= link_to "I Want It!", "#", class: "btn btn-large btn-primary", 
-                    onclick:  "alert('That item is #{@product['styles'].first['percentOff']} off')" %>
+                    onclick:  "alert('That item is #{@product['styles'].first['percentOff']} off \\n\\n Here we could prompt the user for their email address and ask if they would like to recieve an email notification when this product goes on sale.  Also add code to email that user when this product (with id=#{@product['productId']}) has its price dropped by 20% or more of its original price.')" %>
 	</div>
   </div>
 </div>
+
+
 

@@ -4,14 +4,19 @@ class ProductController < ApplicationController
   def new
   end
   
+  # Lists products from Zappos API search with GET parameter: search term
   def index
     @products = do_search(params[:search])
-    #@products = Product.all
   end
 
+  # Display product information for GET parameter: product id
   def show
     @product = get_prod(params[:id]).first
-	#@product = Product.find_by productId: params[:id]
   end
 
+  def createuser
+    respond_to do |format|
+      format.js
+    end
+  end
 end
